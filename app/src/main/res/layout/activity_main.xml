@@ -155,12 +155,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+                    android:id="@+id/tv1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:layout_weight="1"
                     android:text="@{map[`first`]}"/>
                 <TextView
+                    android:id="@+id/tv2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
