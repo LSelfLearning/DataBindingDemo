@@ -8,9 +8,14 @@ import android.widget.Toast;
 
 import com.lewish.start.databindingdemo.databinding.ActivityMainBinding;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private Map<String, String> map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +23,12 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setUser(new User("James","Bond"));
         binding.setPresenter(new Presenter());
+        binding.setList(Arrays.asList("1","2","3","4","5","6"));
+        map = new HashMap<>();
+        map.put("first","first");
+        map.put("second","second");
+        map.put("third","third");
+        binding.setMap(map);
     }
     public class Presenter{
         public void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter){
