@@ -16,12 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private Map<String, String> map;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setUser(new User("James","Bond"));
+        user = new User("James","Bond");
+        binding.setUser(user);
         binding.setPresenter(new Presenter());
         binding.setList(Arrays.asList("1","2","3","4","5","6"));
         map = new HashMap<>();
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         }
         public void onClick(View view){
             Toast.makeText(MainActivity.this, "点击了", Toast.LENGTH_SHORT).show();
+            user.setFirstName("hahahahahahah");
         }
         public void onTextChangedListener(){
             binding.tv.setText("hehe");

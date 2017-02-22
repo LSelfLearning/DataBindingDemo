@@ -173,7 +173,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:layout_weight="1"
-                    android:text="@{map.get(`third`)}"/>
+                    android:text="@{user.firstName}"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
